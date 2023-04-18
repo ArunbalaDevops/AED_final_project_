@@ -26,10 +26,7 @@ public class LabAssistantRole extends Role {
     @Override
    public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,DB4OUtil dB4OUtil) {
        LabAssistantDashBoardJPanel lab = new LabAssistantDashBoardJPanel(account,organization,business,dB4OUtil,enterprise);
-        userProcessContainer.add("LabAssistantDashBoardJPanel",lab);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-        lab.setVisible(true);
+        lab.show();
     }
     
 }

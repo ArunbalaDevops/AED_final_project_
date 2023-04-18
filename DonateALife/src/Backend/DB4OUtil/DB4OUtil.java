@@ -2,16 +2,9 @@ package Backend.DB4OUtil;
 
 import Backend.ConfigureASystem;
 import Backend.EcoSystem;
-import Backend.Employee.Employee;
-import Backend.NGO.NGO;
-import Backend.Role.LDAdminRole;
-import Backend.Role.SystemAdminRole;
-import Backend.UserAccount.UserAccount;
-import com.db4o.Db4o;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
-import com.db4o.config.Configuration;
 import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.ta.TransparentPersistenceSupport;
 import java.nio.file.Paths;
