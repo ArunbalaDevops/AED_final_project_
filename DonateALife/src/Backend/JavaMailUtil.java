@@ -28,7 +28,7 @@ public class JavaMailUtil {
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");
        
-        String myAccountEmail = "arunb.smart@gmail.com";
+        String myAccountEmail = "rajanikshith7@gmail.com";
         String password = "vdkwslqkehruusah";
 
         Session session = Session.getInstance(properties, new Authenticator() {

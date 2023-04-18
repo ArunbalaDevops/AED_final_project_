@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Arun balasubramanian
+ * @author Arun Balasubramanian
  */
 public class AdvocateOrganization extends Organization{
 
