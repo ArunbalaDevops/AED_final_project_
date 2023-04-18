@@ -7,6 +7,7 @@ package Backend.Role;
 import Backend.DB4OUtil.DB4OUtil;
 import Backend.EcoSystem;
 import Backend.Enterprise.Enterprise;
+import Backend.NGO.NGO;
 import Backend.Organization.Organization;
 import Backend.UserAccount.UserAccount;
 import javax.swing.JFrame;
@@ -41,6 +42,16 @@ public abstract class Role {
             return value;
         }
     }
+    
+        public void createWorkArea(JPanel userProcessContainer, 
+            UserAccount account, 
+            Organization organization, 
+            Enterprise enterprise, 
+            EcoSystem business,
+            DB4OUtil dB4OUtil, NGO inNGO){
+            createWorkArea(userProcessContainer, account, organization, enterprise, business, dB4OUtil);
+        }
+
     
     public abstract void createWorkArea(JPanel userProcessContainer, 
             UserAccount account, 

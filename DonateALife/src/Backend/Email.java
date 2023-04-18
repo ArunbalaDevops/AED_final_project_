@@ -27,7 +27,7 @@ public class Email {
     
 
       // Sender's email ID needs to be mentioned
-      String from = "arunb.smart@gmail.com";
+      String from = "rajanikshith7@gmail.com";
 
    
 
@@ -43,7 +43,7 @@ public class Email {
       
       Authenticator auth = new Authenticator() {
         public PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication("arunb.smart@gmail.com", "vdkwslqkehruusah");
+            return new PasswordAuthentication("rajanikshith7@gmail.com", "vdkwslqkehruusah");
         }
     };
        Session session = Session.getDefaultInstance(properties,auth);

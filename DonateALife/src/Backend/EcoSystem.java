@@ -16,61 +16,49 @@ import java.util.ArrayList;
  *
  * @author Arun Balasubramanian
  */
-public class EcoSystem extends Organization{
-    
+public class EcoSystem extends Organization {
+
     private static EcoSystem business;
     private ArrayList<NGO> ngoList;
-    private  UserDirectory userDirectory;
+    private UserDirectory userDirectory;
     private Email email;
-    private SendMessageTwilio twilio;
-    
-    
-    public static EcoSystem getInstance(){
-        if(business==null){
-           business=new EcoSystem();
+
+    public static EcoSystem getInstance() {
+        if (business == null) {
+            business = new EcoSystem();
         }
         return business;
     }
-    
-    public NGO createAndAddNGO(){
-        NGO ngo=new NGO();
+
+    public NGO createAndAddNGO() {
+        NGO ngo = new NGO();
         ngoList.add(ngo);
         return ngo;
     }
-    
+
     @Override
     public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList=new ArrayList<>();
+        ArrayList<Role> roleList = new ArrayList<>();
         roleList.add(new SystemAdminRole());
         return roleList;
     }
-    
-    private EcoSystem(){
+
+    private EcoSystem() {
         super(null);
-        ngoList=new ArrayList<NGO>();
-        userDirectory  = new UserDirectory();
+        ngoList = new ArrayList<NGO>();
+        userDirectory = new UserDirectory();
         email = new Email();
-        twilio=new SendMessageTwilio();
     }
-    
-     public Email getEmail() {
+
+    public Email getEmail() {
         return email;
     }
 
     public void setEmail(Email email) {
         this.email = email;
     }
-    
-      public SendMessageTwilio getTwilio() {
-        return twilio;
-    }
 
-    public void setTwilio(SendMessageTwilio twilio) {
-        this.twilio = twilio;
-    }
-    
-    
- public UserDirectory getUserDirectory() {
+    public UserDirectory getUserDirectory() {
         return userDirectory;
     }
 
@@ -78,7 +66,6 @@ public class EcoSystem extends Organization{
         this.userDirectory = userDirectory;
     }
 
-      
     public ArrayList<NGO> getngoList() {
         return ngoList;
     }
@@ -86,13 +73,13 @@ public class EcoSystem extends Organization{
     public void setngoList(ArrayList<NGO> ngoList) {
         this.ngoList = ngoList;
     }
-    
-    public boolean checkIfUserIsUnique(String userName){
-        if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
+
+    public boolean checkIfUserIsUnique(String userName) {
+        if (!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)) {
             return false;
         }
-        for(NGO ngo:ngoList){
-            
+        for (NGO ngo : ngoList) {
+
         }
         return true;
     }

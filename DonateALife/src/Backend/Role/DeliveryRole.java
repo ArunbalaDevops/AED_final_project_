@@ -21,9 +21,6 @@ public class DeliveryRole extends Role {
         @Override
     public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,DB4OUtil dB4OUtil) {
         DeliveryDashBoardJPanel delPanel = new DeliveryDashBoardJPanel(account,organization,business,dB4OUtil,enterprise);
-        userProcessContainer.add("DeliveryDashBoardJPanel",delPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-        delPanel.setVisible(true);
+        delPanel.show();
     }
 }
