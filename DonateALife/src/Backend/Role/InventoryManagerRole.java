@@ -7,6 +7,7 @@ package Backend.Role;
 import Backend.DB4OUtil.DB4OUtil;
 import Backend.EcoSystem;
 import Backend.Enterprise.Enterprise;
+import Backend.NGO.NGO;
 import Backend.Organization.Organization;
 import Backend.UserAccount.UserAccount;
 import UI.Admin.AdminDashBoardJPanel;
@@ -23,13 +24,13 @@ import UI.InventoryManager.InventoryManagerDashBoardJPanel;
  */
 public class InventoryManagerRole extends Role {
 
-    @Override
-   public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,DB4OUtil dB4OUtil) {
-        InventoryManagerDashBoardJPanel lab = new InventoryManagerDashBoardJPanel(account,organization,business,dB4OUtil,enterprise);
-        userProcessContainer.add("InventoryManagerDashBoardJPanel",lab);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-        lab.setVisible(true);
+    public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, DB4OUtil dB4OUtil) {
+
     }
-    
+
+    public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, DB4OUtil dB4OUtil, NGO inNGO) {
+        InventoryManagerDashBoardJPanel lab = new InventoryManagerDashBoardJPanel(account, organization, business, dB4OUtil, enterprise, inNGO);
+        lab.show();
+    }
+
 }

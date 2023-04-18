@@ -26,10 +26,7 @@ public class DoctorRole extends Role{
     @Override
     public void createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,DB4OUtil dB4OUtil) {
         DoctorDashBoardJPanel docPanel = new DoctorDashBoardJPanel(account,organization,business,dB4OUtil,enterprise);
-        userProcessContainer.add("DoctorAssistantDashBoardJPanel",docPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-        docPanel.setVisible(true);
+        docPanel.show();
     }
        
 }
