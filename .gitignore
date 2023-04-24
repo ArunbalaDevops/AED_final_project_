@@ -1,1 +1,9 @@
-/build/
+/MakeADonation/nbproject/private/
+/MakeADonation/build/
+/MakeADonation/dist/
+/DonateALife/build/
+/DonateALife/dist/
+/DonateALife/nbproject/private/
+/DonateALife/.DS_Store
+.DS_Store
+/MNGO/dist/
